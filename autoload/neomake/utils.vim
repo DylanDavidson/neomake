@@ -191,7 +191,7 @@ function! neomake#utils#MakerFromCommand(command) abort
                            \ '\=expand(submatch(0))', 'g')
     " Create a maker object, with a "fn" callback.
     let maker = copy(s:command_maker)
-    let maker.__command = a:command
+    let maker.__command = command
     return maker
 endfunction
 
