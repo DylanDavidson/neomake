@@ -22,7 +22,7 @@ let s:buffer_job_output = {}
 
 function! neomake#has_async_support() abort
     return has('nvim') ||
-                \ has('channel') && has('job') && has('patch-8.0.0027')
+                \ has('channel') && has('job') && v:version >= 800
 endfunction
 
 function! s:sort_jobs(a, b) abort
